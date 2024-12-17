@@ -7,8 +7,8 @@
 ```bash
 virt-install \
 --name windows10 \
---ram 4096 \
---vcpus 2 \
+--ram 16384 \
+--vcpus 8 \
 --os-type windows \
 --os-variant win10 \
 --disk path=/var/lib/libvirt/images/windows10.qcow2,format=qcow2 \
