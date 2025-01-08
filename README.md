@@ -17,7 +17,7 @@ sudo usermod -aG libvirt $USER
 
 ## Creating a Virtual Hard Disk (200GB in my case)
 ```bash
-qemu-img create -f qcow2 /home/nemesis/Storage/Win10VM/win10disk.qcow 200G
+qemu-img create -f qcow2 /home/nemesis/Storage/Win10VM/win10disk.qcow2 200G
 ```
 
 ## Installing Windows 10 on Virtual Hard Disk (For The First Time Using ISO)
