@@ -28,13 +28,16 @@ sudo virt-install   --name win10   --ram 16384   --vcpus 8   --os-variant win10 
 ### Importing an existing VM
 
 ```bash
-virt-install \
+sudo chmod 777 -R Win10VM/
+sudo chown libvirt-qemu:kvm Win10VM/
+sudo chown libvirt-qemu:kvm Win10VM/win10_disk.qcow2
+sudo virt-install \
 --name windows10 \
 --ram 16384 \
---vcpus 8 \
+--vcpus 6 \
 --os-type windows \
 --os-variant win10 \
---disk path=/var/lib/libvirt/images/windows10.qcow2,format=qcow2 \
+--disk path=/var/home/nemesis/Win10VM/win10_disk.qcow2,format=qcow2 \
 --network network=default \
 --graphics spice \
 --import
